@@ -1,6 +1,6 @@
 ---
 name: slopslayer
-description: Removes AI writing patterns from prose and restores human voice. Use on every piece of prose Claude drafts, edits, or reviews, whether or not the user asks. Also triggers on "deslop", "de-AI", "unslop", "slopslayer", "make it sound human", "remove AI patterns", or any request to check writing for AI tells.
+description: Removes AI writing patterns and restores human voice. Apply to every piece of prose you draft, edit, or review, asked or not. Also triggers on deslop, unslop, de-AI, or slopslayer.
 ---
 
 # Slopslayer
@@ -78,5 +78,4 @@ Load these only when the draft needs the detail.
 ## License
 
 MIT. Derived from stop-slop (Copyright 2025 Hardik Pandya) and the unslop skill in
-cursor/plugins pstack (Copyright 2026 Lauren Tan). See LICENSE for the full notices and
-MERGE-NOTES.md for merge decisions and version history.
+cursor/plugins pstack (Copyright 2026 Lauren Tan). See LICENSE for the full notices.
