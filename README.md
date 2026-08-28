@@ -57,7 +57,7 @@ git clone https://github.com/jebradfield/slopslayer.git ~/.config/opencode/skill
 ## Use
 
 The skill triggers on any prose your agent drafts, edits, or reviews. Invoke it directly
-with `/slopslayer` or by asking to deslop, de-AI, or remove AI patterns from a draft.
+with `/slopslayer` or by asking to deslop, unslop, or de-AI a draft.
 
 It applies to prose only. It never rewrites code, structured data, direct quotations, or
 text inside quotation marks or code fences.
