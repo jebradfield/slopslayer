@@ -42,6 +42,9 @@ Packaging and metadata only. No rule, reference file, or example changed.
   App, so installing that app would have made a documentation file authoritative over
   live repo settings, including `repository.name`. Four of its values had already drifted
   from the actual repo. GitHub stores the description and topics already.
+- `.gitignore`. Boilerplate for editors and an OS that may not be the reader's, in a repo
+  with no build and no code. Its one working line, `*.zip`, only existed because the
+  release asset was being built inside the repo folder.
 
 The repo now tracks only what an agent needs plus the three files a reader needs:
 `SKILL.md`, `references/`, `README.md`, `CHANGELOG.md`, `LICENSE`. Everything at the root
