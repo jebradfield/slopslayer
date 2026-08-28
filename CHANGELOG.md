@@ -6,6 +6,52 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 Versions 1.0.0 and 1.1.0 were development iterations and were never published. 1.2.0 is
 the first public release.
 
+## [1.3.0] - 2026-08-28
+
+Packaging and metadata only. No rule, reference file, or example changed.
+
+### Changed
+
+- Rewrote `LICENSE` as the verbatim MIT template with the three copyright lines stacked
+  at the top. Three explanatory paragraphs sat between the copyright line and the
+  permission grant, which stopped GitHub's detector from matching the template: the API
+  reported `NOASSERTION` and the repo read as unlicensed to every license scanner. The
+  derivation and both source links moved into the README.
+- Shortened the frontmatter `description` from 307 characters to 180 and made it
+  agent-neutral. It told the reader to apply the skill to prose "Claude drafts", which
+  names the wrong vendor on the Codex, Cursor and OpenCode installs the README
+  advertises. Anthropic caps the field at 200.
+- Folded the useful half of `MERGE-NOTES.md` into a Merge decisions section in the
+  README: the six source conflicts, which default won, and the two corrected defects in
+  stop-slop's examples.
+
+### Added
+
+- A release asset, `slopslayer.zip`, built so its root folder is named `slopslayer` as
+  Anthropic's packaging rules require. GitHub's own Download ZIP names the root
+  `slopslayer-main`, which fails that check.
+
+### Removed
+
+- `MERGE-NOTES.md`. It shipped inside the skill telling the reader to install a skill
+  named `deslop`, the pre-1.1.0 name, and to copy only `SKILL.md` and `references/`,
+  dropping the `LICENSE` the MIT License requires. It also routed 11 rules to
+  `references/phrases.md`, deleted in 1.2.0, and its rule counts and pointers had drifted
+  from `SKILL.md`.
+- `.github/settings.yml`. That path is the config file for the Probot Settings GitHub
+  App, so installing that app would have made a documentation file authoritative over
+  live repo settings, including `repository.name`. Four of its values had already drifted
+  from the actual repo. GitHub stores the description and topics already.
+
+The repo now tracks only what an agent needs plus the three files a reader needs:
+`SKILL.md`, `references/`, `README.md`, `CHANGELOG.md`, `LICENSE`. Everything at the root
+is either the skill or documentation of it, so the one-line clone install stays correct.
+
+### Fixed
+
+- The README claimed the skills CLI supports "about thirty" agents; it supports 73.
+  Replaced with a link to the CLI's own list.
+
 ## [1.2.0] - 2026-08-27
 
 ### Changed
@@ -87,5 +133,5 @@ the first public release.
   table. Example 5's rewrite used a "not X, Y" contrast, banned by its binary-contrast
   table.
 
-See [MERGE-NOTES.md](MERGE-NOTES.md) for the six source conflicts, how each was resolved,
-and the full coverage audit.
+See the README's Merge decisions section for the six source conflicts and how each was
+resolved.
